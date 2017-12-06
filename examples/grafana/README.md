@@ -77,7 +77,7 @@ Open a terminal window and navigate to the directory containing this example.
 Start Grafana on port 3000:
 ```
 docker run --name=grafana -d -p 3000:3000 \
-  --link fnserver --link prometheus grafana/grafana
+  --link prometheus prom/prometheus
 ```
 
 Open a browser on Grafana at [http://localhost:3000](http://localhost:3000).
