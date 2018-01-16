@@ -26,6 +26,7 @@ perl -i -pe 's/\d+\.\d+\.\K(\d+)/$1+1/e' $version_file
 version=$(grep -m1 -Eo "[0-9]+\.[0-9]+\.[0-9]+" $version_file)
 echo "Version: $version"
 
+docker pull fnproject/dind:17.12
 make docker-build
 
 git add -u
